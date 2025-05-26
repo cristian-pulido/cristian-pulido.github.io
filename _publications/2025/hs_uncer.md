@@ -1,14 +1,14 @@
 ---
 title:          "Prioritizing Crime Hotspots with Conformal Prediction and Uncertainty Quantification"
-date:           2025-05-11
+date:           2025-05-23
 selected:       true
 pub:            "2025 XXV International Symposium on Signal Processing, Image, and Artificial Vision (STSIVA)"
 # pub_date:       "2025"
 pub_pre:        "Submitted to "
-pub_post:       'Under review.'
+pub_post:       ' Under review.'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 abstract: >-
-  This study introduces a model-agnostic framework that combines Conformal Prediction with crime indicators to produce confidence-aware hotspot prioritization. The approach supports adaptive policing by classifying areas into actionable categories based on prediction reliability.
+  This work presents a model-agnostic framework using Conformal Prediction to generate calibrated prediction intervals for crime hotspot forecasting. Applied to Chicago data, it reveals spatial variations in prediction confidence, highlighting the value of uncertainty in decision-making.
 
 cover:          /assets/images/covers/hs.png  
 
