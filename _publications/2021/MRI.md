@@ -9,6 +9,9 @@ abstract: >-
   This study evaluates early BOLD and DTI imaging as predictors of neurological outcomes in comatose patients with TBI, CPA, or stroke. Results highlight structural and functional connectivity markers in the ascending arousal network as potential outcome biomarkers.
 
 cover:          /assets/images/covers/MRI.webp
+
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#7f8c8d;"><i class="fas fa-brain me-1"></i> Neuroimaging</span>'
+
 authors:
   - Cesar O. Enciso-Olivera
   - Edgar G. Ordóñez-Rubiano
@@ -25,10 +28,7 @@ authors:
   - Clara P. Hernández-Torres
   - José Hernandez
   - Jorge H. Marín-Muñoz  
-  
 
 links:
   Paper: https://doi.org/10.1038/s41598-021-98506-7
 ---
-
-

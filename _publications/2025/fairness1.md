@@ -1,12 +1,12 @@
 ---
 title:          "Quantifying Fairness in Spatial Predictive Policing"
 date:           2025-05-01
-selected:       true
+selected:       false
 pub:            "Artificial Intelligence and Law."
 # pub_date:       "2025"
 pub_pre:        "Submitted to "
-pub_post:       ' .Major revisions. '
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
+pub_post:       ' Major revisions. '
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#6f42c1;"><i class="fas fa-balance-scale me-1"></i>Fairness</span>'
 abstract: >-
   This study evaluates the fairness of predictive policing models by analyzing how benefits are distributed across populations in different areas. Results reveal that while predictions may be statistically fair, their use in patrol allocation can produce significant disparities, with up to 45% difference between groups.
 

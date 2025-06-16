@@ -4,6 +4,7 @@ date:           2024-05-22
 selected:       false
 pub:            "Clinical Neurology and Neurosurgery"
 pub_date:       "2024"
+pub_last: '<span class="badge badge-pill badge-publication bg-info text-dark"><i class="fas fa-brain me-1"></i>Neuroimaging</span>'
 type: "journal"
 abstract: >-
   This study describes resting state network alterations in patients with disorders of consciousness after severe TBI. Findings reveal three distinct RSN activation patterns—normal, asymmetric, and absent—highlighting significant disruptions compared to healthy controls.

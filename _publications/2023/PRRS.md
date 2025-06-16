@@ -10,6 +10,8 @@ abstract: >-
 cover:          /assets/images/covers/prrs.webp
 
 type: "abstract"
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#c0392b;"><i class="fas fa-disease me-1"></i>Animal Health</span>'
+
 authors:
   - Fausto Moreno
   - Cristian Pulido

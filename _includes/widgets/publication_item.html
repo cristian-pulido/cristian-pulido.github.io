@@ -52,3 +52,64 @@
     </div>
 
 </div>
+
+
+<script>
+function filterPubs(type) {
+  const items = document.querySelectorAll('.publication-item');
+  items.forEach(item => {
+    const itemType = item.getAttribute('data-type');
+    item.style.display = (type === 'all' || itemType === type) ? '' : 'none';
+  });
+}
+
+function updateCounts() {
+  const items = document.querySelectorAll('.publication-item');
+  const counts = {
+    all: items.length,
+    journal: 0,
+    conference: 0,
+    abstract: 0,
+    thesis: 0,
+  };
+
+  items.forEach(item => {
+    const type = item.getAttribute('data-type');
+    if (counts.hasOwnProperty(type)) {
+      counts[type]++;
+    }
+  });
+
+  for (const type in counts) {
+    const countSpan = document.getElementById(`count-${type}`);
+    if (countSpan) {
+      countSpan.textContent = `(${counts[type]})`;
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', updateCounts);
+</script>
+
+<script>
+function updateVisibleYears() {
+  const yearBlocks = document.querySelectorAll('.year-block');
+
+  yearBlocks.forEach(block => {
+    const publications = block.querySelectorAll('.publication-item');
+    const visible = Array.from(publications).some(pub => pub.style.display !== 'none');
+
+    block.style.display = visible ? '' : 'none';
+  });
+}
+
+function filterPubs(type) {
+  const items = document.querySelectorAll('.publication-item');
+  items.forEach(item => {
+    const itemType = item.getAttribute('data-type');
+    item.style.display = (type === 'all' || itemType === type) ? '' : 'none';
+  });
+
+  updateVisibleYears();
+}
+</script>

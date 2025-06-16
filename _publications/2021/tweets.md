@@ -9,6 +9,9 @@ abstract: >-
   This work proposes a predictive model to quantify and anticipate the Perception of Security using social media data. The approach incorporates external influences and retweet dynamics, offering interpretable and competitive short-term forecasts.
 
 cover:          /assets/images/covers/tweets.jpg
+
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#003366; color:#ffffff;"><i class="fas fa-shield-alt me-1"></i>Security</span>'
+
 authors:
   - Cristian Pulido
   - Luisa Fernanda Chaparro

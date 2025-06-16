@@ -8,129 +8,56 @@ body_attr: >-
 
 {% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
 
-<div class="btn-group-vertical" style="
-  position: fixed;
-  top: 100px;
-  left: 20px;
-  z-index: 1000;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  background: white;
-">
-  <button type="button" class="btn btn-outline-primary" onclick="filterPubs('all')">
-    All <span id="count-all" class="badge bg-light text-dark ms-1"></span>
-  </button>
-  <button type="button" class="btn btn-outline-primary" onclick="filterPubs('journal')">
-    Journal <span id="count-journal" class="badge bg-light text-dark ms-1"></span>
-  </button>
-  <button type="button" class="btn btn-outline-primary" onclick="filterPubs('conference')">
-    Conference <span id="count-conference" class="badge bg-light text-dark ms-1"></span>
-  </button>
-  <button type="button" class="btn btn-outline-primary" onclick="filterPubs('abstract')">
-    Abstract <span id="count-abstract" class="badge bg-light text-dark ms-1"></span>
-  </button>
-  <button type="button" class="btn btn-outline-primary" onclick="filterPubs('thesis')">
-    Thesis <span id="count-thesis" class="badge bg-light text-dark ms-1"></span>
-  </button>
-</div>
-
-
-
-
-
-
 <div class="row">
-    <div class="col-12 col-lg-10">
-        {% for year in pubs_by_year %}
-        <div class="year-block" data-year="{{ year.name }}">
-          {% assign num_papers = year.items | size %}
-          <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
-          <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
-            {% for item in year.items %}
-              <div class="publication-item" data-type="{{ item.type }}">
-                {% if item.type %}
-                <span class="badge small ms-2" data-type="{{ item.type | downcase }}">
-                  {{ item.type | capitalize }}
-                </span>
-                {% endif %}
-                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
-              </div>
-            {% endfor %}
+  <!-- Panel de filtros por tipo (izquierda) -->
+  <div class="d-none d-lg-block col-lg-2">
+    <div class="btn-group-vertical w-100 sticky-top" style="top: 80px;">
+      <button type="button" class="btn btn-outline-primary" onclick="filterPubs('all')">
+        All <span id="count-all" class="badge bg-light text-dark ms-1"></span>
+      </button>
+      <button type="button" class="btn btn-outline-primary" onclick="filterPubs('journal')">
+        Journal <span id="count-journal" class="badge bg-light text-dark ms-1"></span>
+      </button>
+      <button type="button" class="btn btn-outline-primary" onclick="filterPubs('conference')">
+        Conference <span id="count-conference" class="badge bg-light text-dark ms-1"></span>
+      </button>
+      <button type="button" class="btn btn-outline-primary" onclick="filterPubs('abstract')">
+        Abstract <span id="count-abstract" class="badge bg-light text-dark ms-1"></span>
+      </button>
+      <button type="button" class="btn btn-outline-primary" onclick="filterPubs('thesis')">
+        Thesis <span id="count-thesis" class="badge bg-light text-dark ms-1"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="col-12 col-lg-8">
+    {% for year in pubs_by_year %}
+    <div class="year-block" data-year="{{ year.name }}">
+      {% assign num_papers = year.items | size %}
+      <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
+      <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+        {% for item in year.items %}
+          <div class="publication-item" data-type="{{ item.type }}">
+            {% if item.type %}
+            <span class="badge small ms-2" data-type="{{ item.type | downcase }}">
+              {{ item.type | capitalize }}
+            </span>
+            {% endif %}
+            {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
           </div>
-        </div>
         {% endfor %}
-
+      </div>
     </div>
+    {% endfor %}
+  </div>
 
-    <div class="col-2 d-none d-lg-block">
-        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for year in pubs_by_year %}
-            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
-            {% endfor %}
-        </div>
+  <!-- Panel de navegación por años (derecha) -->
+  <div class="d-none d-lg-block col-lg-2">
+    <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+      {% for year in pubs_by_year %}
+      <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
+      {% endfor %}
     </div>
-
+  </div>
 </div>
-
-<script>
-function filterPubs(type) {
-  const items = document.querySelectorAll('.publication-item');
-  items.forEach(item => {
-    const itemType = item.getAttribute('data-type');
-    item.style.display = (type === 'all' || itemType === type) ? '' : 'none';
-  });
-}
-
-function updateCounts() {
-  const items = document.querySelectorAll('.publication-item');
-  const counts = {
-    all: items.length,
-    journal: 0,
-    conference: 0,
-    abstract: 0,
-    thesis: 0,
-  };
-
-  items.forEach(item => {
-    const type = item.getAttribute('data-type');
-    if (counts.hasOwnProperty(type)) {
-      counts[type]++;
-    }
-  });
-
-  for (const type in counts) {
-    const countSpan = document.getElementById(`count-${type}`);
-    if (countSpan) {
-      countSpan.textContent = `(${counts[type]})`;
-    }
-  }
-}
-
-document.addEventListener('DOMContentLoaded', updateCounts);
-</script>
-
-<script>
-function updateVisibleYears() {
-  const yearBlocks = document.querySelectorAll('.year-block');
-
-  yearBlocks.forEach(block => {
-    const publications = block.querySelectorAll('.publication-item');
-    const visible = Array.from(publications).some(pub => pub.style.display !== 'none');
-
-    block.style.display = visible ? '' : 'none';
-  });
-}
-
-function filterPubs(type) {
-  const items = document.querySelectorAll('.publication-item');
-  items.forEach(item => {
-    const itemType = item.getAttribute('data-type');
-    item.style.display = (type === 'all' || itemType === type) ? '' : 'none';
-  });
-
-  updateVisibleYears();
-}
-</script>
-
-

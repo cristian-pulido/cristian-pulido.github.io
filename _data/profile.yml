@@ -18,15 +18,21 @@ github: cristian-pulido
 linkedin: cristian-alejandro-pulido-quintero-673a62302
 orcid: 0000-0003-0785-7683
 
-short_bio_text_justify: false
+short_bio_text_justify: true
 short_bio: >-
   <p>
     I am a mathematician with a strong background in applied modeling and computational analysis. My current work focuses on the integration of uncertainty-aware predictive models into decision-making processes for complex systems.
   </p>
   <p>
-    Through my doctoral research, I explore how changes in behavior and incomplete information impact the effectiveness of emergency response strategies. At DataLab, I contribute to the development of data-driven tools for assessing health risks, optimizing interventions, and supporting public sector decision-making.
+  Through my doctoral research, I focus on integrating uncertainty into predictive models to improve decision-making in emergency response systems. I study how incomplete information and intervention-induced behavioral changes affect planning and resource allocation. At DataLab, I contribute to the development of data-driven tools for assessing health risks, optimizing interventions, and supporting public sector decision-making.
   </p>
 
+  <p class="mt-2">
+    <i class="fas fa-shield-alt me-1"></i> Security & Crime Prediction · 
+    <i class="fas fa-stethoscope me-1"></i> Animal Health & Epidemiology · 
+    <i class="fas fa-brain me-1"></i> Decision Support Systems · 
+    <i class="fas fa-project-diagram me-1"></i> Network Modeling
+  </p>
 
 portrait_url: /assets/images/photos/portrait.jpg
 #portrait_caption: >-
@@ -52,6 +58,13 @@ education:
     B.Sc. in Mathematics
   date: Feb. 2011 – Apr. 2017
 experience:
+
+- name: Universidad Antonio Nariño (UAN)
+  logo: /assets/images/badges/uan.png
+  position: Adjunct Professor (Lecturer 2022–2024, Adjunct from 2024)
+  date: Feb. 2022 – Present
+
+
 - name: DataLab – Universidad Nacional de Colombia
   logo: /assets/images/badges/datalab_logo.svg
   position: Researcher in Predictive Analytics
@@ -71,3 +84,6 @@ experience:
 awards:
 - name: Best Student Paper Award - 7th Int. Conference on Behavioral and Social Computing (BESC)
   date: 2020
+- name: Emerging Leaders in the Americas Program (ELAP) Scholarship – Government of Canada. Selected for the ELAP scholarship funded by Global Affairs Canada to carry out a 4-month doctoral research stay at Université Laval (Quebec, Canada) from February to May 2026.
+  date: 2025
+    

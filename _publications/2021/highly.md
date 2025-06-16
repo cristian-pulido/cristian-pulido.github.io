@@ -9,6 +9,9 @@ abstract: >-
   This study analyzes over three million emergency reports to uncover sessional and shared temporal patterns of aggressive behavior in Bogotá. Findings reveal high predictability in key city areas, supporting routine activity theory as a lens for crime prevention.
 
 cover:          /assets/images/covers/higly.gif
+
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#f39c12;"><i class="fas fa-user-shield me-1"></i> Security & Behavior</span>'
+
 authors:
   - Jorge Victorino
   - Jorge Rudas 

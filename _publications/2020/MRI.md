@@ -4,6 +4,10 @@ date:           2020-06-10
 selected:       false
 pub:            "Medicine"
 pub_date:       "2020"
+pub_last: >-
+  <span class="badge badge-pill badge-publication" style="background-color:#17a2b8; color:#fff;">
+    <i class="fas fa-brain me-1"></i>Neuroimaging
+  </span>
 type: "journal"
 abstract: >-
   This study demonstrates that key resting state networks can be reliably identified using sICA on 1.5T fMRI scans in healthy individuals. Results support the feasibility of RSN analysis in middle-income settings using accessible imaging technology.
@@ -27,5 +31,3 @@ authors:
 links:
   Paper: https://doi.org/10.1097/MD.0000000000021125
 ---
-
-

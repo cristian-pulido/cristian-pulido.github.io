@@ -9,6 +9,9 @@ abstract: >-
   This study uses source decomposition to identify consistent and independent activity patterns underlying aggressive behaviors in Bogotá. Results suggest these events stem from reproducible sources observable across multiple spatial scales.
 
 cover:          /assets/images/covers/rinas.jpg
+
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#003366; color:#ffffff;"><i class="fas fa-shield-alt me-1"></i>Security</span>'
+
 authors:
   - Jorge Rudas
   - Ana María Reyes  

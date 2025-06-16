@@ -9,6 +9,9 @@ abstract: >-
   This study presents a method to identify spatio-temporal patterns of aggressive behavior in Bogotá using rhythm and tempo metrics inspired by routine activity theory. Findings reveal shared behavioral dynamics across city zones, enabling targeted mitigation strategies.
 
 cover:          /assets/images/covers/rinas.jpg
+
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#003366; color:#ffffff;"><i class="fas fa-shield-alt me-1"></i>Security</span>'
+
 authors:
   - Jorge Victorino
   - Jorge Rudas

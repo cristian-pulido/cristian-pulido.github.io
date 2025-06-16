@@ -4,6 +4,7 @@ date:           2023-11-9
 selected:       false
 pub:            "Second Ibero-American Symposium of Master and Doctorate in Artificial Intelligence"
 pub_date:       "2023"
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#6f42c1;"><i class="fas fa-balance-scale me-1"></i>Fairness</span>'
 abstract: >-
       This work analyzes fairness in three commonly used predictive policing models, focusing on disparities across protected variables. Results show consistent fairness levels across models, despite limited correlation between fairness and accuracy, emphasizing the need for just algorithmic strategies in public security.
 

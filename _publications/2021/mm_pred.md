@@ -9,6 +9,9 @@ abstract: >-
   This study proposes a decision-level data fusion approach to improve the prediction of aggressive behavior using multiple data sources. While fusion enhances hotspot detection, it increases prediction error and produces more complex spatial patterns.
 
 cover:          /assets/images/covers/rinas.jpg
+
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#003366; color:#ffffff;"><i class="fas fa-shield-alt me-1"></i>Security</span>'
+
 authors:
   - Ana María Reyes
   - Jorge Rudas 

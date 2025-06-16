@@ -9,6 +9,9 @@ abstract: >-
   This study presents a multi-scale, periodicity-based model to predict aggressive behavior incidents using historical data. The approach achieves high precision with an average relative error of 9.8%, outperforming existing methods.
 
 cover:          /assets/images/covers/rinas.jpg
+
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#f39c12;"><i class="fas fa-user-shield me-1"></i> Security & Behavior</span>'
+
 authors:
   - Jorge Victorino
   - Miguel Barrero

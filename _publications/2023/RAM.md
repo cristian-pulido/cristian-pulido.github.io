@@ -10,6 +10,8 @@ abstract: >-
 cover:          /assets/images/covers/pig.webp
 
 type: "abstract"
+pub_last: '<span class="badge badge-pill badge-publication" style="background-color:#e67e22;"><i class="fas fa-virus me-1"></i> AMR & Animal Health</span>'
+
 authors:
   - Fausto Moreno
   - Cristian Pulido
