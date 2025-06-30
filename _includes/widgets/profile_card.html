@@ -49,9 +49,15 @@
                 <hr />
                 <div class="row">
                     <div class="col">
+                        <a class="btn p-0 border-0 bg-transparent text-primary ml-1" onclick="copyEmail()" title="Copy email">
+                            <i class="fas fa-copy"></i>
+                            <input type="text" value="{{ site.data.profile.email }}" id="real-email" style="position:absolute; left:-9999px;">
+                        </a>
                         <a class="pr-3 no-break" href="mailto:{{ site.data.profile.email | encode_email }}">
                             <i class="fas fa-at"></i> <span class="email-text">{{ site.data.profile.email | replace: "@", "(at)" }}</span>
                         </a>
+                        
+                        
 
                         {% if site.data.profile.gscholar %}
                         {%- if site.data.profile.gscholar contains 'scholar.google' -%}
@@ -119,3 +125,16 @@
     </div>
 </div>
 {% endif %}
+
+
+<script>
+function copyEmail() {
+  const input = document.getElementById("real-email");
+  input.type = 'text'; 
+  input.select();
+  input.setSelectionRange(0, 99999); 
+  document.execCommand("copy");
+  input.type = 'hidden';
+  alert("Email copied to clipboard!");
+}
+</script>

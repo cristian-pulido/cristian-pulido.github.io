@@ -110,6 +110,11 @@ function filterPubs(type) {
     item.style.display = (type === 'all' || itemType === type) ? '' : 'none';
   });
 
+  const buttons = document.querySelectorAll('.btn-group-vertical .btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  const selectedBtn = document.querySelector(`.btn[onclick="filterPubs('${type}')"]`);
+  if (selectedBtn) selectedBtn.classList.add('active');
+
   updateVisibleYears();
 }
 </script>

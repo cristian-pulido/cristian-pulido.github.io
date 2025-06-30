@@ -95,3 +95,9 @@ div.lazy {
 h2[id^="year-"] {
   scroll-margin-top: 50px;
 }
+
+.btn-group-vertical .btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
