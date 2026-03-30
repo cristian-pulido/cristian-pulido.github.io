@@ -10,7 +10,15 @@
                             <ul class="list-unstyled mb-1">
                                 {% for item in site.data.profile.education %}
                                 <li class="media mb-1">
-                                    <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
+                                    <div class="mr-2 mt-1 d-flex flex-column align-items-center">
+                                        {% if item.logos %}
+                                            {% for logo in item.logos %}
+                                            <img src="{{ logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="{% unless forloop.last %}mb-1{% endunless %}">
+                                            {% endfor %}
+                                        {% else %}
+                                            <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;">
+                                        {% endif %}
+                                    </div>
                                     <div class="media-body">
                                         <div>{{ item.name }}</div>
                                         <div class="small">{{ item.dept }}</div>
@@ -32,6 +40,7 @@
                             <h6>Experience</h6>
                             <ul class="list-unstyled mb-1">
                                 {% for item in site.data.profile.experience %}
+                                {% if item.ongoing == true or item.date contains 'Present' or item.date contains 'present' %}
                                 <li class="media mb-1">
                                     <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
                                     <div class="media-body">
@@ -43,6 +52,23 @@
                                         </div>
                                     </div>
                                 </li>
+                                {% endif %}
+                                {% endfor %}
+
+                                {% for item in site.data.profile.experience %}
+                                {% unless item.ongoing == true or item.date contains 'Present' or item.date contains 'present' %}
+                                <li class="media mb-1">
+                                    <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
+                                    <div class="media-body">
+                                        <div>{{ item.name }}</div>
+                                        <div class="small">{{ item.dept }}</div>
+                                        <div class="small d-flex">
+                                            <div>{{ item.position }}</div>
+                                            <div class="mt-auto ml-auto no-break"><em>{{ item.date }}</em></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endunless %}
                                 {% endfor %}
                             </ul>
                         </div>

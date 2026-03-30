@@ -30,11 +30,33 @@
                             {% endif %}
                         </div>
                         <div class="text-profile-position">
+                            {% assign now_unix = "now" | date: "%s" %}
                             {% for position in site.data.profile.positions %}
-                            {% if position.logo -%}
-                            <img src="{{ position.logo | relative_url }}" alt="Logo" class="inline-badge"/>
-                            {%- endif %}
-                            {{ position.name }}<br/>
+                            {% assign show_position = true %}
+                            {% if position.start_date %}
+                                {% assign start_unix = position.start_date | date: "%s" %}
+                                {% if now_unix < start_unix %}
+                                    {% assign show_position = false %}
+                                {% endif %}
+                            {% endif %}
+                            {% if position.end_date %}
+                                {% assign end_unix = position.end_date | date: "%s" %}
+                                {% if now_unix > end_unix %}
+                                    {% assign show_position = false %}
+                                {% endif %}
+                            {% endif %}
+                            {% if show_position %}
+                                {% if position.logos %}
+                                <span class="d-inline-flex align-items-center mr-1">
+                                    {% for logo in position.logos %}
+                                    <img src="{{ logo | relative_url }}" alt="Logo" class="inline-badge {% unless forloop.last %}mr-1{% endunless %}"/>
+                                    {% endfor %}
+                                </span>
+                                {% elsif position.logo %}
+                                <img src="{{ position.logo | relative_url }}" alt="Logo" class="inline-badge"/>
+                                {% endif %}
+                                {{ position.name }}<br/>
+                            {% endif %}
                             {% endfor %}
                         </div>
                         <div class="text-profile-bio mt-3" {% if site.data.profile.short_bio_text_justify %}style="text-align: justify;"{% endif %}>

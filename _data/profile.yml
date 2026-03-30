@@ -5,10 +5,14 @@ navbar_name: "Cristian Alejandro Pulido Quintero"
 positions:
 - logo: /assets/images/badges/un.png  # Logo is optional
   name: PhD Student in Systems and Computer Engineering
+- logos:
+    - /assets/images/badges/laval.png
+    - /assets/images/badges/cervo.svg
+  name: Visiting Ph.D. Research Intern at Université Laval / CERVO
+  start_date: 2026-01-12
+  end_date: 2026-05-07
 - logo: /assets/images/badges/datalab_logo.svg  # Logo is optional
   name: Data Science Researcher
-- logo: /assets/images/badges/uan.png  # Logo is optional
-  name: Adjunct Professor in Computer Science and Engineering
 
 
 email: "cpulido@unal.edu.co"
@@ -45,6 +49,13 @@ education:
     Department of Systems and Industrial Engineering<br/>
     Ph.D. Student
   date: Aug. 2023 - present
+- name: Université Laval (Quebec, Canada) / CERVO Research Centre
+  logos:
+    - /assets/images/badges/laval.png
+    - /assets/images/badges/cervo.svg
+  position: >-
+    Visiting Ph.D. Research Intern (ELAP Mobility Stay)
+  date: Jan. 12, 2026 – May 7, 2026
 - name: Universidad Nacional de Colombia, Bogotá D.C., Colombia.
   logo: /assets/images/badges/un.png
   position: >- 
@@ -62,7 +73,7 @@ experience:
 - name: Universidad Antonio Nariño (UAN)
   logo: /assets/images/badges/uan.png
   position: Adjunct Professor (Lecturer 2022–2024, Adjunct from 2024)
-  date: Feb. 2022 – Present
+  date: Feb. 2022 – Dec. 2025
 
 
 - name: DataLab – Universidad Nacional de Colombia
@@ -84,6 +95,6 @@ experience:
 awards:
 - name: Best Student Paper Award - 7th Int. Conference on Behavioral and Social Computing (BESC)
   date: 2020
-- name: Emerging Leaders in the Americas Program (ELAP) Scholarship – Government of Canada. Selected for the ELAP scholarship funded by Global Affairs Canada to carry out a 4-month doctoral research stay at Université Laval (Quebec, Canada) from February to May 2026.
+- name: Emerging Leaders in the Americas Program (ELAP) Scholarship – Government of Canada. Selected for the ELAP scholarship funded by Global Affairs Canada to carry out a 4-month doctoral research stay at Université Laval (Quebec, Canada) from Jan. 12, 2026 to May 7, 2026.
   date: 2025
     
